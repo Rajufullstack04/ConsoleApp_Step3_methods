@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Mathod_Advanced_container.Program</StartupObject>
+    <StartupObject>AsynchronousCallContainer.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,15 @@
   <ItemGroup>
     <Compile Include="1.Mathods_Revition.cs" />
     <Compile Include="2.Mathods_Advanced.cs" />
+    <Compile Include="3.Methods_ref_out.cs" />
+    <Compile Include="7.ExtensionMethods.cs" />
+    <Compile Include="5.Sync-call.cs" />
+    <Compile Include="6.AsychronousCall\1.Asyc_Basic.cs" />
+    <Compile Include="6.AsychronousCall\2.Async_Call_Ex.cs" />
+    <Compile Include="6.AsychronousCall\3.AsyncOtherExample.cs" />
+    <Compile Include="6.AsychronousCall\4.Async_With_Params.cs" />
+    <Compile Include="8.Extension_Method_Datatypes.cs" />
+    <Compile Include="9.ExceptionHandling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
