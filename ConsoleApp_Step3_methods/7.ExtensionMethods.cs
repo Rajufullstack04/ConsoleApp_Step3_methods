@@ -1,49 +1,51 @@
 ﻿using System;
 
-
-namespace PhoneSystem
+namespace VehicleSystem
 {
     /// <summary>
-    /// A basic smartphone
+    /// A basic car
     /// </summary>
-    public class Smartphone
+    public class Car
     {
-        public string Brand { get; set; }
+        public string Model { get; set; }
+
         /// <summary>
-        ///  Make a call is a void method 
+        /// Drive method is a void method
         /// </summary>
-        /// <param name="number"></param>
-        public void MakeCallApp(string number)
+        public void Drive()
         {
-            Console.WriteLine($"Calling {number} from {Brand} smartphone.");
+            Console.WriteLine($"The {Model} car is driving.");
         }
     }
 
-    //FitnessApp
-
-    // Note: static class contains only static members
-
-    public static class SmartphoneExtensions
+    // Extension methods must be in a static class
+    public static class CarExtensions
     {
-        public static void TrackFitnessApp(this Smartphone myPhone)
+        /// <summary>
+        /// Extension method to add music system functionality
+        /// </summary>
+        public static void PlayMusic(this Car myCar)
         {
-            Console.WriteLine($"The {myPhone.Brand} smartphone is tracking fitness now!");
+            Console.WriteLine($"The {myCar.Model} car is playing music 🎵.");
+        }
+
+        /// <summary>
+        /// Extension method to enable GPS navigation
+        /// </summary>
+        public static void EnableGPS(this Car myCar, string destination)
+        {
+            Console.WriteLine($"The {myCar.Model} car is navigating to {destination} using GPS.");
         }
     }
-
-
+    
     class Program
     {
         public static void Main()
         {
-            Smartphone phone = new Smartphone() { Brand = "Pixel" };
-            phone.MakeCallApp("12345678");
-            phone.TrackFitnessApp();
+            Car car = new Car() { Model = "Tesla Model 3" };
+            car.Drive();              // Normal method
+            car.PlayMusic();          // Extension method
+            car.EnableGPS("Airport"); // Extension method with parameter
         }
     }
-
-
-
-
-
 }
